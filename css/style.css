@@ -1,0 +1,145 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #fff;
+}
+
+:root {
+  --mainColor: rgb(115, 0, 255);
+}
+
+::selection {
+  color: #fff;
+  background-color: var(--mainColor);
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, rgba(0, 140, 255, 0.37), rgba(134, 28, 255, 0.633), rgba(255, 176, 6, 0.814));
+  padding: 15px;
+}
+
+.box {
+  width: 550px;
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px 30px;
+  background: transparent;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  background-color: rgba(255, 255, 255, 0.347);
+  box-shadow: 0 0 55px rgba(189, 189, 189, 0.477);
+}
+
+.form {
+  text-align: left;
+}
+
+h1,
+h2,
+input,
+button {
+  margin-bottom: 10px;
+}
+
+.help,
+span,
+input,
+textarea {
+  color: var(--mainColor);
+}
+
+input,
+textarea,
+button {
+  border: 2px solid var(--mainColor);
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 7px;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+textarea {
+  resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.64);
+}
+
+#email {
+  text-transform: none;
+}
+
+button {
+  width: 100%;
+  font-size: 20px;
+  padding: 7px 25px;
+  margin: 10px auto;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: rgba(115, 0, 255, 0.462);
+  border-radius: 7px;
+  transition: .4s ease;
+}
+
+button:hover {
+  box-shadow: 0 0 10px rgba(115, 0, 255, 0.462);
+}
+
+button:focus {
+  background-color: rgb(115, 0, 255);
+  color: #fff;
+}
+
+.help {
+  font-size: 18px;
+}
+
+.span__help {
+  text-transform: uppercase;
+  color: rgba(255, 60, 0, 0.814);
+}
+
+.redColor{
+  border-color: red;
+}
+
+@media (max-width: 570px) {
+  h2 {
+    color: var(--mainColor);
+  }
+
+  .box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  h2,
+  button {
+    font-size: 18px;
+  }
+
+  input {
+    width: 100%;
+  }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Send Message via Email</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="box">
+        <h1>Contact me via <span>Email</span></h1>
+        <div class="form">
+          <h2>Enter reciever name:</h2>
+          <input
+            type="text"
+            name="reciever"
+            id="reciever"
+            class="allInputs"
+            placeholder="Enter reciever name..."
+          />
+          <h2>Enter Your Name:</h2>
+          <input
+            type="text"
+            name="text"
+            id="from_name"
+            class="allInputs"
+            placeholder="Your name..."
+          />
+          <h2>Enter your email:</h2>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="allInputs"
+            placeholder="Your email..."
+          />
+          <h2>Enter your message:</h2>
+          <textarea
+            name="message"
+            id="message"
+            cols="20"
+            rows="7"
+            class="allInputs"
+            placeholder="Your message..."
+          ></textarea>
+          <br />
+          <button id="btn" onclick="checkAndSend()">Send</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="./js/script.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("ne0cvvtLMHGWUBGUI");
+      })();
+    </script>
+  </body>
+</html>
