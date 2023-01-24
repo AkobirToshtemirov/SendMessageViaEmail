@@ -4,6 +4,15 @@ let userEmail = document.getElementById("email");
 let userMessage = document.getElementById("message");
 let allInputs = document.querySelectorAll(".allInputs");
 
+allInputs.forEach(element => {
+element.addEventListener('keypress', function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("btn").click();
+  }
+})
+})
+
 function checkAndSend() {
   allInputs.forEach((item) => {
     if (item.value.length !== 0) {
